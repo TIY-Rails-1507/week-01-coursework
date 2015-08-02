@@ -1,13 +1,12 @@
 require 'minitest/autorun'
-
-require_relative 'test_helper'
+require_relative '../lib/account'
 
 class TestAccount < MiniTest::Unit::TestCase
     
   def test_account_is_created_with_an_opening_balance
     opening_balance = 50
     account = Account.new(opening_balance)
-    assert_equal(opening_balance, account.balance())
+    assert_equal(opening_balance, account.balance)
   end
 
   def test_withdrawing_reduces_the_balance   
